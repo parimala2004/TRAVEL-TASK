@@ -95,6 +95,9 @@ class _InputFormScreenState extends State<InputFormScreen> {
                     if (value == null || value.isEmpty) {
                       return 'number is required';
                     }
+                    else if (! RegExp(r'^\d{10}$').hasMatch(value)){
+                      return 'enter a valid number';
+                    }
                     return null;
                   },
                 ),
